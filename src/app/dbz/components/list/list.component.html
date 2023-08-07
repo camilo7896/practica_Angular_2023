@@ -1,0 +1,13 @@
+<ul>
+  <li
+    *ngFor="let character of characterList; let i = index; let isLast = last"
+    class="list-group-item"
+    [ngClass]="{
+      'list-group-item-success': isLast
+    }"
+  >
+    <span>{{ i + 1 }}</span>
+    {{ character.name }} -
+    {{ character.power }}
+  </li>
+</ul>
