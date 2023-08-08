@@ -1,6 +1,19 @@
-<form class="row">
-  <input class="form-control mb-2" type="text" placeholder="Nombre..." />
-  <input class="form-control mb-2" type="number" placeholder="Id..." />
+<form class="row" (ngSubmit)="emitCharacter()">
+  <input 
+  class="form-control mb-2" 
+  type="text" 
+  name="name"
+  [(ngModel)]="character.name" 
+  placeholder="Nombre..." />
+  
+  <input 
+  class="form-control mb-2" 
+  type="number"
+  name="power" 
+  [(ngModel)]="character.power"
+  placeholder="Id..." />
+
+  <!-- <pre>{{character | json}}</pre> -->
   <!-- boton -->
   <button type="submit" class="btn btn-primary">Enviar</button>
 </form>

@@ -1,13 +1,25 @@
 <ul>
-  <li
+  
+    <li
     *ngFor="let character of characterList; let i = index; let isLast = last"
     class="list-group-item"
     [ngClass]="{
       'list-group-item-success': isLast
     }"
-  >
-    <span>{{ i + 1 }}</span>
-    {{ character.name }} -
-    {{ character.power }}
+    >
+    <div class="containerList">
+      <!-- contaierInfo -->
+      <div class="containerInfo">
+        <span>{{ i + 1 }}</span> -
+        {{ character.name }} -
+        {{ character.power }}  
+      </div>
+    <!-- containerButton -->
+    <div class="containerButton">
+      <button (click)="onDeleteCharacter(i)" class="btn btn-danger">X</button>
+    </div>
+  </div>
   </li>
+
+
 </ul>

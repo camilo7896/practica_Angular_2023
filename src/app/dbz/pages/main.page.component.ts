@@ -1,19 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { Character } from '../interfaces/character.interface';
+import { DbzService } from '../services/dbz.service';
 
 @Component({
-    selector: 'dbz-main-page',
-    templateUrl: './main-page-component.html'
+  selector: 'dbz-main-page',
+  templateUrl: './main-page-component.html'
 })
 
-export class MainpageComponent{
-   public character:Character[]=[
-    {name:'Camilo',
-    power:1000},
-    {name:'Crsitian',
-    power:200000},
-    {name:'Jane',
-    power:300000}
-   ];
+export class MainpageComponent {
+
+  constructor(public dbzService:DbzService){}
 
 }

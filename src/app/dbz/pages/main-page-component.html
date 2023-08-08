@@ -5,14 +5,14 @@
   <!-- lISTADO -->
   <div class="col">
     <h4>Listado</h4>
-    <dbz-component-list [characterList]="character"></dbz-component-list>
+    <dbz-component-list [characterList]="dbzService.character" (onDelete)="dbzService.onDeleteCharacter($event)"></dbz-component-list>
   </div>
   <!-- END_lISTADO -->
   <!-- FORMULARIO -->
   <div class="col">
     <h4>Agregar usuario</h4>
     
-    <dbz-add-character></dbz-add-character>
+    <dbz-add-character (onNewCharacter)="dbzService.onNewCharacters($event)"></dbz-add-character>
   </div>
   <!-- END_FORMULARIO -->
 </div>
